@@ -11,11 +11,12 @@ import {
   Checkbox,
   Button,
   useColorModeValue,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 
 const Details = () => {
   const bgColor = useColorModeValue("gray.50", "whiteAlpha.50");
-
+  const colSpan = useBreakpointValue({ base: 2, md: 1 });
   return (
     <VStack
       w="full"
@@ -30,13 +31,13 @@ const Details = () => {
         <Text>If you already have an account, click here</Text>
       </VStack>
       <SimpleGrid columns={2} columnGap={3} rowGap={4} w="full">
-        <GridItem colSpan={1}>
+        <GridItem colSpan={colSpan}>
           <FormControl>
             <FormLabel>First Name</FormLabel>
             <Input placeholder="First Name" />
           </FormControl>
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={colSpan}>
           <FormControl>
             <FormLabel>Last Name</FormLabel>
             <Input placeholder="Last Name" />

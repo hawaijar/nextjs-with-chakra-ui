@@ -4,7 +4,11 @@ import Details from "../src/sections/details";
 
 const IndexPage = () => (
   <Container maxW="container.xl" p={0}>
-    <Flex h={{ base: "auto", md: "100vh" }} py={[0, 10, 40]}>
+    <Flex
+      h={{ base: "auto", md: "100vh" }}
+      py={[0, 10, 40]}
+      direction={{ base: "column", md: "row" }}
+    >
       <Details />
       <Cart />
     </Flex>
