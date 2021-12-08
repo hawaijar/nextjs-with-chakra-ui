@@ -10,9 +10,12 @@ import {
   Select,
   Checkbox,
   Button,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 const Details = () => {
+  const bgColor = useColorModeValue("gray.50", "whiteAlpha.50");
+
   return (
     <VStack
       w="full"
@@ -20,7 +23,7 @@ const Details = () => {
       p={10}
       spacing={10}
       alignItems={"flex-start"}
-      bg="gray.50"
+      bg={bgColor}
     >
       <VStack spacing={3} alignItems="flex-start">
         <Heading size="2xl">Your details</Heading>
